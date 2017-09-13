@@ -1,15 +1,10 @@
 import DBAccessor as dbac
 import csv
 import datetime
+import numpy as np
 
 rows = dbac.DBAccessor.ExecuteQuery("SELECT * FROM CORRECTED_GPS_modified")
-#print(rows)
 
-f = open('data.csv' + str(datetime.date.today()), 'ab')
+array = np.array(rows)
 
-csvWriter = csv.writer(f)
-
-for row in rows:
-    csvWriter.writerow(row)
-
-f.close()
+print(array)

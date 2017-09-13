@@ -12,6 +12,8 @@
     <OutputPath>.</OutputPath>
     <Name>KerasTest</Name>
     <RootNamespace>KerasTest</RootNamespace>
+    <InterpreterId>{5c066df5-0563-46ac-93e3-5733911dd0a6}</InterpreterId>
+    <InterpreterVersion>3.5</InterpreterVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -24,6 +26,9 @@
   <ItemGroup>
     <Compile Include="DBAccessor.py" />
     <Compile Include="KerasTest.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="{5c066df5-0563-46ac-93e3-5733911dd0a6}\3.5" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
