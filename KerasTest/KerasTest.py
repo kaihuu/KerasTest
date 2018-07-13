@@ -24,7 +24,7 @@ import requests
 import json
 import math
 from copy import copy
-from skfeature.function.similarity_based import fisher_score
+#from skfeature.function.similarity_based import fisher_score
 
 def oversampling(n, bins, x, y):
     for i in range(n.shape[0]):
@@ -134,13 +134,17 @@ X_train, X_validation, Y_train, Y_validation =\
 #print(X_test)
 
 
-score = fisher_score.fisher_score(X_train, Y_train.flatten())
-idx = fisher_score.feature_ranking(score)
-num_fea = int(X.shape[1] * 9 / 10)
+#score = fisher_score.fisher_score(X_train, Y_train.flatten())
+#idx = fisher_score.feature_ranking(score)
+#num_fea = int(X.shape[1] * 9 / 10)
 
-selected_features_train = X_train[:, idx[0:num_fea]]
-selected_features_test = X_test[:, idx[0:num_fea]]
-selected_features_validation = X_validation[:, idx[0:num_fea]]
+#selected_features_train = X_train[:, idx[0:num_fea]]
+#selected_features_test = X_test[:, idx[0:num_fea]]
+#selected_features_validation = X_validation[:, idx[0:num_fea]]
+
+selected_features_train = X_train
+selected_features_test = X_test
+selected_features_validation = X_validation
 
 input = selected_features_train.shape[1]
 node = selected_features_train.shape[1]
