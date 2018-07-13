@@ -217,7 +217,11 @@ print(eval)
 print()
 Ypre = model.predict(selected_features_train, verbose=1)
 
-requests.post('https://hooks.slack.com/services/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', data = json.dumps({
+f.open('url.txt')
+url = f.read()
+f.close()
+
+requests.post(url, data = json.dumps({
     'text': u'Learning is Finished', # 投稿するテキスト
     'username': u'SHEPHERD', # 投稿のユーザー名
     'icon_emoji': u':finish:', # 投稿のプロフィール画像に入れる絵文字
